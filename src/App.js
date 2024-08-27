@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ParentComponent from './ParentComponent.js';
+import './styles.css';
+// import image from './image.jpg'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const containerStyle = {
+        // backgroundImage: `url(${image})`, /* Adjust the path as needed */
+        // backgroundSize: 'cover', /* Ensures the image covers the entire background */
+        // backgroundPosition: 'center', /* Centers the image */
+        // backgroundRepeat: 'no-repeat', /* Prevents the image from repeating */
+        // backgroundAttachment: 'fixed', /* Keeps the background fixed while scrolling */
+        // minHeight: '100vh', /* Ensures the container takes full viewport height */
+    };
+
+    return (
+        <div className="App" style={containerStyle}>
+            <ParentComponent />
+        </div>
+    );
 }
 
 export default App;
